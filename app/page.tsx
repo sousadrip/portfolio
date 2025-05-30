@@ -7,14 +7,14 @@ import TechStack from "./components/tech-stack"
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-14 items-center">
-          <div className="mr-4 hidden md:flex">
+    <div className="min-h-screen bg-background flex flex-col items-center">
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex flex-col items-center">
+        <div className="container flex flex-col items-center h-14 justify-center">
+          <div className="mr-4 hidden md:flex flex-col items-center">
             <Link className="mr-6 flex items-center space-x-2" href="/">
               <span className="hidden font-bold sm:inline-block">João Pedro</span>
             </Link>
-            <nav className="flex items-center space-x-6 text-sm font-medium">
+            <nav className="flex items-center space-x-6 text-sm font-medium justify-center">
               <Link href="#about" className="transition-colors hover:text-foreground/80">
                 Sobre
               </Link>
@@ -35,12 +35,12 @@ export default function Page() {
         </div>
       </header>
 
-      <main className="px-4 md:px-6">
+      <main className="flex flex-col items-center w-full px-4 md:px-6">
         <section
           id="about"
-          className="flex flex-col items-center justify-center min-h-screen py-12 md:py-24 lg:py-32"
+          className="flex flex-col items-center justify-center min-h-screen py-12 md:py-24 lg:py-32 w-full"
         >
-          <div className="container px-4 md:px-6">
+          <div className="container flex flex-col items-center px-4 md:px-6">
             <div className="space-y-4 text-center">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                 João Pedro De Sousa Coelho
@@ -62,7 +62,7 @@ export default function Page() {
                 equipe e raciocínio lógico voltado à resolução de problemas.
               </p>
             </div>
-            <div className="space-x-4 mt-6">
+            <div className="space-x-4 mt-6 flex justify-center">
               <Link href="https://github.com/sousadrip" target="_blank">
                 <Button variant="outline" size="icon">
                   <Github className="h-4 w-4" />
@@ -85,10 +85,10 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="projects" className="py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
-          <div className="container px-4 md:px-6">
+        <section id="projects" className="py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900 w-full flex flex-col items-center">
+          <div className="container flex flex-col items-center px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">Projetos</h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 justify-center">
               <ProjectCard
                 title="Iris ML Dashboard"
                 description="Dashboard interativo para classificação de flores Iris usando Machine Learning. Implementa árvore de decisão com 97.5% de acurácia, visualizações de dados e interface responsiva."
@@ -141,8 +141,8 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="skills" className="py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+        <section id="skills" className="py-12 md:py-24 lg:py-32 w-full flex flex-col items-center">
+          <div className="container flex flex-col items-center px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
               Habilidades Técnicas
             </h2>
@@ -150,21 +150,21 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="education" className="py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
-          <div className="container px-4 md:px-6">
+        <section id="education" className="py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900 w-full flex flex-col items-center">
+          <div className="container flex flex-col items-center px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">Educação</h2>
             <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-1 max-w-3xl mx-auto">
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
                 <h3 className="text-xl font-bold mb-2">Graduação em Engenharia de Software</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-2">Universidade Católica de Brasília</p>
                 <p className="text-gray-500 dark:text-gray-400">Conclusão prevista: 2028 | Cursando</p>
               </div>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
                 <h3 className="text-xl font-bold mb-2">Ensino Médio</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-2">Colégio Ideal de Taguatinga</p>
                 <p className="text-gray-500 dark:text-gray-400">Conclusão: 2023</p>
               </div>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
                 <h3 className="text-xl font-bold mb-2">Ensino Fundamental</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-2">Colégio Marista Champagnat</p>
                 <p className="text-gray-500 dark:text-gray-400">Conclusão: 2019</p>
@@ -173,27 +173,27 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="experience" className="py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+        <section id="experience" className="py-12 md:py-24 lg:py-32 w-full flex flex-col items-center">
+          <div className="container flex flex-col items-center px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
               Experiência Profissional
             </h2>
             <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-1 max-w-3xl mx-auto">
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
                 <h3 className="text-xl font-bold mb-2">Desenvolvedor Frontend</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-2">Freelancer, Brasília</p>
                 <p className="text-gray-500 dark:text-gray-400 mb-4">Fevereiro 2024 – Presente</p>
-                <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
+                <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400 text-left inline-block">
                   <li>Desenvolvimento de interfaces web responsivas</li>
                   <li>Implementação de funcionalidades usando JavaScript e React</li>
                   <li>Colaboração com clientes para atender requisitos específicos</li>
                 </ul>
               </div>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
                 <h3 className="text-xl font-bold mb-2">Auxiliar de Programação</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-2">CONCRECON CONCRETO E CONSTRUÇÕES</p>
                 <p className="text-gray-500 dark:text-gray-400 mb-4">Novembro 2022 – Outubro 2024</p>
-                <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
+                <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400 text-left inline-block">
                   <li>Suporte ao desenvolvimento de sistemas internos</li>
                   <li>Manutenção e atualização de bases de dados</li>
                   <li>Documentação de processos e sistemas</li>
@@ -203,11 +203,11 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="languages" className="py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
-          <div className="container px-4 md:px-6">
+        <section id="languages" className="py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900 w-full flex flex-col items-center">
+          <div className="container flex flex-col items-center px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">Idiomas</h2>
             <div className="max-w-md mx-auto">
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl font-bold">Inglês</h3>
                   <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
@@ -222,23 +222,23 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="contact" className="py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="mx-auto max-w-2xl">
+        <section id="contact" className="py-12 md:py-24 lg:py-32 w-full flex flex-col items-center">
+          <div className="container flex flex-col items-center px-4 md:px-6">
+            <div className="mx-auto max-w-2xl flex flex-col items-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
                 Entre em Contato
               </h2>
-              <div className="flex flex-col md:flex-row gap-8">
-                <div className="md:w-1/2">
+              <div className="flex flex-col md:flex-row gap-8 items-center">
+                <div className="md:w-1/2 flex flex-col items-center">
                   <h3 className="text-xl font-bold mb-4">Informações de Contato</h3>
                   <div className="space-y-4">
-                    <div className="flex items-center">
+                    <div className="flex items-center justify-center">
                       <Mail className="h-5 w-5 mr-2" />
                       <a href="mailto:desousacoelhojoaopedro@gmail.com" className="hover:underline">
                         desousacoelhojoaopedro@gmail.com
                       </a>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center justify-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-5 w-5 mr-2"
@@ -253,7 +253,7 @@ export default function Page() {
                       </svg>
                       <span>+55 61 98195-9111</span>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center justify-center">
                       <Github className="h-5 w-5 mr-2" />
                       <a
                         href="https://github.com/sousadrip"
@@ -264,7 +264,7 @@ export default function Page() {
                         github.com/sousadrip
                       </a>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center justify-center">
                       <Linkedin className="h-5 w-5 mr-2" />
                       <a
                         href="https://www.linkedin.com/in/joaopedro03s"
@@ -277,7 +277,7 @@ export default function Page() {
                     </div>
                   </div>
                 </div>
-                <div className="md:w-1/2">
+                <div className="md:w-1/2 flex flex-col items-center">
                   <ContactForm />
                 </div>
               </div>
@@ -286,9 +286,9 @@ export default function Page() {
         </section>
       </main>
 
-      <footer className="border-t">
-        <div className="container flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6">
-          <p className="text-xs text-gray-500 dark:text-gray-400">
+      <footer className="border-t w-full flex flex-col items-center">
+        <div className="container flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 justify-center">
+          <p className="text-xs text-gray-500 dark:text-gray-400 text-center w-full">
             © 2024 João Pedro De Sousa Coelho. Todos os direitos reservados.
           </p>
         </div>
