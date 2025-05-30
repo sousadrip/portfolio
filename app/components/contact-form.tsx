@@ -5,19 +5,33 @@ import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useState } from "react"
-import { submitContactForm } from "../actions"
+
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mnnvaney"
 
 export default function ContactForm() {
   const [pending, setPending] = useState(false)
   const [message, setMessage] = useState("")
 
-  async function handleSubmit(formData: FormData) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
     setPending(true)
+    setMessage("")
+
+    const formData = new FormData(e.currentTarget)
     try {
-      const response = await submitContactForm(formData)
-      setMessage(response.message)
-    } catch (error) {
-      setMessage("Something went wrong. Please try again.")
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      })
+      if (response.ok) {
+        setMessage("Mensagem enviada com sucesso!")
+        e.currentTarget.reset()
+      } else {
+        setMessage("Erro ao enviar mensagem. Tente novamente.")
+      }
+    } catch {
+      setMessage("Erro ao enviar mensagem. Tente novamente.")
     } finally {
       setPending(false)
     }
@@ -25,7 +39,7 @@ export default function ContactForm() {
 
   return (
     <Card className="p-6">
-      <form action={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-2">
             Name
