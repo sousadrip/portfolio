@@ -36,50 +36,51 @@ export default function Page() {
       </header>
 
       <main className="px-4 md:px-6">
-        <section id="about"
-          className="flex flex-col items-center justify-center min-h-screen py-12 md:py-24 lg:py-32">
+        <section
+          id="about"
+          className="flex flex-col items-center justify-center min-h-screen py-12 md:py-24 lg:py-32"
+        >
           <div className="container px-4 md:px-6">
-              <div className="space-y-4 text-center">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  João Pedro De Sousa Coelho
-                </h1>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Desenvolvedor Front-end & Back-end | Estudante de Engenharia de Software
-                </p>
-              </div>
-              <div className="max-w-[700px] text-center">
-                <p className="text-gray-500 dark:text-gray-400 mb-4">
-                  Atualmente curso Engenharia de Software e estou em busca de uma oportunidade profissional como
-                  Desenvolvedor Front-end ou Back-end. Tenho interesse em aplicar e expandir meus conhecimentos práticos
-                  em tecnologias como JavaScript, React, HTML e CSS. No back-end, possuo familiaridade com Python e
-                  Java, além de experiência com bancos de dados relacionais, como MySQL e PostgreSQL.
-                </p>
-                <p className="text-gray-500 dark:text-gray-400">
-                  Atuei anteriormente como Auxiliar de Programação, desenvolvendo habilidades como proatividade,
-                  aprendizado ágil e foco em resultados. Destaco-me pela boa comunicação, facilidade no trabalho em
-                  equipe e raciocínio lógico voltado à resolução de problemas.
-                </p>
-              </div>
-              <div className="space-x-4 mt-6">
-                <Link href="https://github.com/sousadrip" target="_blank">
-                  <Button variant="outline" size="icon">
-                    <Github className="h-4 w-4" />
-                    <span className="sr-only">GitHub</span>
-                  </Button>
-                </Link>
-                <Link href="https://www.linkedin.com/in/joaopedro03s" target="_blank">
-                  <Button variant="outline" size="icon">
-                    <Linkedin className="h-4 w-4" />
-                    <span className="sr-only">LinkedIn</span>
-                  </Button>
-                </Link>
-                <Link href="mailto:desousacoelhojoaopedro@gmail.com">
-                  <Button variant="outline" size="icon">
-                    <Mail className="h-4 w-4" />
-                    <span className="sr-only">Email</span>
-                  </Button>
-                </Link>
-              </div>
+            <div className="space-y-4 text-center">
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                João Pedro De Sousa Coelho
+              </h1>
+              <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+                Desenvolvedor Front-end & Back-end | Estudante de Engenharia de Software
+              </p>
+            </div>
+            <div className="max-w-[700px] text-center">
+              <p className="text-gray-500 dark:text-gray-400 mb-4">
+                Atualmente curso Engenharia de Software e estou em busca de uma oportunidade profissional como
+                Desenvolvedor Front-end ou Back-end. Tenho interesse em aplicar e expandir meus conhecimentos práticos
+                em tecnologias como JavaScript, React, HTML e CSS. No back-end, possuo familiaridade com Python e
+                Java, além de experiência com bancos de dados relacionais, como MySQL e PostgreSQL.
+              </p>
+              <p className="text-gray-500 dark:text-gray-400">
+                Atuei anteriormente como Auxiliar de Programação, desenvolvendo habilidades como proatividade,
+                aprendizado ágil e foco em resultados. Destaco-me pela boa comunicação, facilidade no trabalho em
+                equipe e raciocínio lógico voltado à resolução de problemas.
+              </p>
+            </div>
+            <div className="space-x-4 mt-6">
+              <Link href="https://github.com/sousadrip" target="_blank">
+                <Button variant="outline" size="icon">
+                  <Github className="h-4 w-4" />
+                  <span className="sr-only">GitHub</span>
+                </Button>
+              </Link>
+              <Link href="https://www.linkedin.com/in/joaopedro03s" target="_blank">
+                <Button variant="outline" size="icon">
+                  <Linkedin className="h-4 w-4" />
+                  <span className="sr-only">LinkedIn</span>
+                </Button>
+              </Link>
+              <Link href="mailto:desousacoelhojoaopedro@gmail.com">
+                <Button variant="outline" size="icon">
+                  <Mail className="h-4 w-4" />
+                  <span className="sr-only">Email</span>
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
